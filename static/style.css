@@ -1,0 +1,89 @@
+/* Center the container-fluid and limit its width to 75% */
+.container-fluid {
+    max-width: 60%;
+    margin: 0 auto;
+    border: 3px solid rgb(115, 184, 130); /* Add a border */
+    padding: 20px; /* Add some padding */
+  }
+
+/* Add some spacing and a background color to the container */
+#generate-button-container {
+    margin-top: 20px;
+    /* background-color: #f5f5f5; */
+    padding: 20px;
+}
+
+/* Style the generate button */
+#generate-button {
+    width: auto;
+    height: 50px;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+/* Add some padding and a background color to the textarea */
+#custom-text {
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 300px;
+}
+
+/* Add some padding and a background color to the input fields */
+#audio-video-url, #file-upload {
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+
+/* Style the tabs */
+#tabs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#tabs .nav-item {
+    margin-right: 10px;
+}
+
+#tabs .nav-link {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+#tabs .nav-link:hover {
+    background-color: #e6e6e6;
+}
+
+#tabs .nav-link.active {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.nav-tabs {
+    border-bottom: 0px;
+}
+
+/* Add margin to the header */
+header {
+    margin-top: 50px;
+}
+
+/* Use a modern font for the header */
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 50px;
+}
+
+/* Add margin to progress bar */
+.container-fluid .progress {
+    padding: 0px;
+    margin-top: 15px;
+    border:  0px;
+}
+.result {
+  font-weight: bold;
+  margin-top: 40px;
+}

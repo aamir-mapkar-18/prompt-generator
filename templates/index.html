@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prompt Generator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1 class="text-center">Prompt Generator</h1>
+    </header>
+    <form id="prompt-form" action="/" method="post">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="nav nav-tabs" id="tabs" role="tablist">
+                <a class="nav-item nav-link active" id="tab1" data-toggle="tab" href="#tab1-content" role="tab" aria-controls="tab1-content" aria-selected="true">Custom Text</a>
+                <a class="nav-item nav-link" id="tab2" data-toggle="tab" href="#tab2-content" role="tab" aria-controls="tab2-content" aria-selected="false">Audio/Video</a>
+                <a class="nav-item nav-link" id="tab3" data-toggle="tab" href="#tab3-content" role="tab" aria-controls="tab3-content" aria-selected="false">File</a>
+              </div>
+              <div class="tab-content" id="tab-content">
+                <div class="tab-pane fade show active" id="tab1-content" role="tabpanel" aria-labelledby="tab1">
+                  <textarea class="form-control" id="custom-text" name="custom-text"></textarea>
+                </div>
+                <div class="tab-pane fade" id="tab2-content" role="tabpanel" aria-labelledby="tab2">
+                  <input type="text" class="form-control" id="audio-video-url" name="audio-video-url">
+                </div>
+                <div class="tab-pane fade" id="tab3-content" role="tabpanel" aria-labelledby="tab3">
+                  <input type="file" class="form-control" id="file-upload" name="file-upload">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center" id="generate-button-container">
+            <button id="generate-button" class="btn btn-success" form="prompt-form" type="submit">Generate Training Data</button>
+          </div>
+        </div>
+    </form>
+    {% if result %}
+        <div class="result">{{ result }}</div>
+    {% endif %}
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
